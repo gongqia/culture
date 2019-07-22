@@ -1,0 +1,279 @@
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: rgb(0,0,0);
+	color: rgb(42,51,60);
+}
+p{
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+.bannerBox{
+	position: relative;
+	height: auto;
+	padding-bottom: 15.6%;
+}
+.bannerContent{
+	min-height: 0;
+	height: auto;
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	left: 0px;
+}
+.bannerContent img{
+	display: block;
+	height: auto;
+	width: 100%;
+	vertical-align: middle;
+}
+@media (min-width: 992px){
+  .bannerBox {
+   margin-top: 60px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .bannerBox {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 768px) {
+  .bannerBox {
+    margin-top: 60px;
+  }
+}
+/*内容*/
+.feedBack{
+	min-height: 100px;
+	padding: 70px 0px;
+	background-color: rgb(0,0,0);
+}
+.topBox{
+	overflow: hidden;
+}
+.topBox h3{
+	font-size: 16px;
+	color: #fff;
+	margin-top: 0;
+	margin-bottom: 11px;
+	font-weight: 400;
+	line-height: 1.2;
+}
+.l1,.l2{
+	width: 100%;
+}
+.topBox p{
+	margin-top: 0px;
+	margin-bottom: 14px;
+}
+.l1 .add,.tel,.email{
+	font-size: 12px;
+	color: rgb(153,153,153);
+	padding-right: 60px;
+	display: inline-block;
+	width: calc(30.4% - 28px);
+}
+@media(max-width:767px){
+	.l1 .add,.tel,.email{
+		width: 100%;
+		padding: 0px;
+	}
+}
+.middleBox{
+	display: block;
+	/*overflow: hidden;*/
+}
+.middleBox a{
+	display: inline-block;
+	margin-right: 10px;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	line-height: 43px;
+	transition: all 0.5s ease-in-out 0s; 
+}
+.middleBox a:hover{
+	background-color: rgb(232, 194, 3);
+}
+.middleBox a i{
+	font-size: 16px;
+    color: rgb(232, 194, 3);
+    width: 36px;
+    height: 36px;
+    display: block;
+    line-height: 36px;
+}
+.middleBox a:hover i{
+	color: #fff;
+}
+
+.twoCode{
+	position: relative;
+}
+.twoCode:hover .code{
+	display: block;
+	transform: scale(1);
+	/*animation-delay: 0.5s;
+	transition: all 0.3s ease-out 0s;*/
+}
+.code{
+	display: none;
+	transform: scale(0.8);
+	position: absolute;
+	width: 159px;
+	height: auto;
+	top: -165px;
+	left: -63px;
+	background: #fff;
+	box-shadow: rgba(0,0,0,0.2) 0px 5px 10px;
+	padding: 1px;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 6px;
+}
+.code:after{
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 69px;
+	height: 0;
+	width: 0;
+	border-color: #fff rgba(0,0,0,0);
+	border-width: 10px 10px 0px 10px;
+	border-style: solid;
+}
+.code img{
+	width: 150px;
+	height: 150px;
+}
+.bottomBox{
+	margin-top: 60px;
+	display: block;
+	overflow: hidden;
+}
+.inputTxt{
+	position: relative;
+	width: 30%;
+	float: left;
+	margin-right: 3.33333%;
+	margin-bottom: 2.006rem;
+}
+select.chooseType{
+	color: #fff;
+	padding-right: 30px;
+	background-image: url(../img/chooseMore.png);
+	background-repeat: no-repeat;
+	appearance:none;
+  	-moz-appearance:none;  /*清除默认样式*/
+  	-webkit-appearance:none;
+  	background-position: right;
+}
+.chooseType{
+	color: rgb(255,255,255);
+	font-size: 14px;
+	height: 36px;
+	background-color: rgb(0,0,0);
+	border-bottom: 1px solid rgb(153,153,153)!important;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	padding: .429rem .929rem;
+	line-height: 1.571429;
+	width: 100%;
+}
+.inputTxt option{
+	color: #fff;
+	background: rgb(232,194,3);
+}
+.tips{
+	font-size: 10px;
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: -18px;
+	line-height: 1.5;
+	color: #555;
+}
+.inputTxtMore{
+	width: 100%;
+	padding-right:3.33333%;
+}
+.inputTxtMore .chooseType{
+	height: auto;
+}
+.inputTxt .pimg{
+	right: 0px;
+}
+.submit{
+	margin-bottom: 0px;
+}
+.inputTxtMore button{
+	display: block;
+	color: rgb(255,209,0);
+	text-align: center;
+	font-size: 15px;
+	cursor: pointer;
+	border: 1px solid rgb(255,209,0);
+	transition: 0.5s ease-in-out 0s;
+	background: transparent;
+	width: 200px;
+	height: 46px;
+}
+.inputTxtMore button:hover{
+	background:rgb(255,209,0);
+	color: #fff;
+}
+
+@media(max-width:767px){
+	.feedBack{
+		padding: 20px 0px;
+	}
+	.bottomBox{
+		margin-top: 22px;
+	}
+	.inputTxt{
+		width: 100%;
+		margin-right: 0px;
+	}
+	.inputTxtMore button{
+		width: 100px;
+		height: 36px;
+	}
+}
+/*锚点回到顶部*/
+.toTop{
+	opacity: 0.5;
+	display: none;
+	transition: 1s ease-out; 0s;
+	display: inline-block;
+    height: 40px;
+    width: 40px;
+    z-index: 9;
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    text-align: center;
+    line-height: 32px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px;
+    white-space: nowrap;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-style: solid;
+    overflow: hidden;
+}
+.toTop:hover{
+	background-color: #e8c203;
+	opacity: 1;
+	border-color:rgba(0,0,0,0.5);
+}
+@media(max-width:768px){
+	.toTop{
+		bottom: 67px!important;
+	}
+}

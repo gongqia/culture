@@ -1,0 +1,370 @@
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: rgb(0,0,0);
+	color: rgb(42,51,60);
+}
+p{
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+.bannerBox{
+	position: relative;
+	height: auto;
+	padding-bottom: 15.6%;
+}
+.bannerContent{
+	min-height: 0;
+	height: auto;
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	left: 0px;
+}
+.bannerContent img{
+	display: block;
+	height: auto;
+	width: 100%;
+	vertical-align: middle;
+}
+@media (min-width: 992px){
+  .bannerBox {
+   margin-top: 60px;
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .bannerBox {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 768px) {
+  .bannerBox {
+    margin-top: 60px;
+  }
+}
+/*内容*/
+.subcolumNav{
+	position: relative;
+	z-index: 9;
+	text-align: center;
+	background: #000;
+	max-width: 100%;
+}
+.subcolum{
+	text-align: center;
+	overflow: hidden;
+}
+.subcolumCon{
+	float: left;
+	text-align: left;
+}
+.subcolumCon ul{
+	margin: 0px;
+	padding: 10px 0;
+	max-width: 100%;
+	list-style: none;
+	text-align: center;
+	display: flex;
+	justify-content: left;
+}
+.subcolumCon ul li{
+	white-space: nowrap;
+	display: inline-block;
+	float: none;
+}
+.subcolumCon ul li a{
+	color: #fff;
+	text-decoration: none;
+    display: block;
+    margin: 0 5px;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 20px;
+    height: 30px;
+    transition: all .6s;
+    position: relative;
+}
+.subcolumCon ul li a:before{
+	content: '';
+	display: block;
+	width: 6px;
+	height: 1px;
+	background-color: #E8C203;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transition: ease .65s;
+}
+.subcolumCon ul li a:after{
+	content: '';
+	display: block;
+	width: 0px;
+	height: 1px;
+	background: #e8c203;
+	position: absolute;
+	left: 50%;
+	bottom: 0px;
+	transition: ease .65s;
+}
+.subcolumCon ul li a:hover:after{
+	width: 100%;
+	left: 0px;
+	transition-delay: .2s;
+}
+.subcolumCon ul li a.yellow:before{
+	background-color: #fff;
+}
+.yellow{
+	background-color: #E8C203;
+}
+.subcolumloc{
+	float: right;
+	padding: 10px 0;
+}
+.subcolumloc li{
+	list-style: none;
+	color: #fff;
+	line-height: 30px;
+	float: left;
+	font-size: 12px;
+}
+.subcolumloc li a{
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	transition: all .6s;
+}
+.subcolumloc li a:hover{
+	color: #e8c203;
+}
+.subcolumloc i{
+	padding: 0 10px;
+	color: #fff;
+}
+@media (max-width: 992px) {
+	.subcolumCon{
+		float: none;
+		height: 54px;
+	}
+	.subcolumloc{
+		float: none;
+	}
+	.subcolum{
+		border-bottom: 1px solid #f0f2f5;
+	}
+}
+@media (min-width: 1025px) {
+	.subcolumCon ul{
+		display: block;
+	}
+}
+/*新闻排布*/
+.newsList{
+	min-height: 100px;
+	padding: 70px 0px;
+	background-color: rgb(0,0,0);
+}
+.mainNews ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	overflow: hidden;
+}
+.mainNews ul li{
+	width: 100%;
+	/*display: inline-block;*/
+	float: left;
+	position: relative;
+	margin-bottom: 0;
+	padding: 20px 0;
+	transition: all .36s ease-out 0s;
+	border-bottom: 1px solid #e9e9e9;
+}
+.mainNews ul li:hover{
+	background: #E8C603;
+	padding: 20px;
+	border-bottom-color: #E8C603;
+}
+.mainNews a{
+	color: #fff;
+}
+.imgBox{
+	width: 33.333%;
+	float: left;
+	padding-right: 50px;
+}
+.imgBox img{
+	max-width: 100%;
+}
+.rightContent{
+	width: 66.667%;
+	float: left;
+	overflow: hidden;
+}
+.mainNews ul li:hover .firstBox{
+	width: 60%;
+	float: left;
+}
+.firstBox h3{
+	font-weight: 400;
+	margin-bottom: 11px;
+	margin-top: 22px;
+}
+.firstBox span{
+	color: #999;
+	font-size: 13px;
+}
+.firstBox p{
+	font-size: 14px;
+	color: #999;
+	margin: 0px;
+}
+.mainNews ul li:hover .firstBox span{
+	color: #fff;
+}
+.mainNews ul li:hover .firstBox p{
+	color: #fff;
+}
+.iconBox i{
+	opacity: 0;
+	font-size: 20px;
+    transition: all .3s ease-out 0s;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+}
+.mainNews ul li:hover .iconBox i{
+	opacity: 1;
+}
+/*页数*/
+.page{
+	margin-top: 20px;
+	text-align: center;
+	cursor: default;
+}
+.pageCenter{
+	display: inline-block;
+}
+.pageUp,.pageUp{
+	color: rgb(204, 213, 219);
+    padding: 9px 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(228, 234, 236);
+    border-image: initial;
+    background: rgb(255, 255, 255);
+    float: left;
+}
+.pageNum{
+	cursor: default;
+	color: rgb(255, 255, 255);
+    background: rgb(232, 194, 3);
+    border-color: rgb(232, 194, 3);
+    text-align: center;
+    padding: 9px 15px;
+    border: 1px solid rgb(232, 194, 3);
+    float: left;
+}
+.pageMore{
+	display: none;
+	margin-top: 20px;
+	text-align: center;
+}
+.btnMore{
+	padding: .9rem 1.4rem;
+	color: #fff;
+	background: rgb(232,194,3);
+}
+.btnMore i{
+	line-height: inherit;
+	width: 1em;
+	margin: -1px 3px 0;
+	text-align: center;
+	transform: scale(1.6);
+}
+@media(max-width:767px){
+	.newsList{
+		padding: 20px 0;
+	}
+	.mainNews ul li,.mainNews ul li:hover{
+		padding: 10px;
+	}
+	.imgBox{
+		display: none;
+	}
+	.rightContent{
+		width: 100%;
+		padding: 0px;
+	}
+	.mainNews ul li:hover .firstBox{
+		width: 100%;
+	}
+	.firstBox h3{
+		margin-top: 0px;
+	}
+	.iconBox{
+		height: 0px;
+	}
+	.mainNews ul li:hover .iconBox{
+		text-align: right;
+		height: 23px;
+		width: 100%;
+		float: left;
+	}
+	.mainNews ul li:hover .iconBox i{
+		position:relative;
+		display: inline-block;
+		right: 0;
+	}
+	.page{
+		display: none;
+	}
+	.pageMore{
+		display: block;
+	}
+}
+
+/*锚点回到顶部*/
+.toTop{
+	opacity: 0.5;
+	display: none;
+	transition: 1s ease-out; 0s;
+	display: inline-block;
+    height: 40px;
+    width: 40px;
+    z-index: 9;
+    position: fixed;
+    bottom: -100px;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    text-align: center;
+    line-height: 32px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px;
+    white-space: nowrap;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-style: solid;
+    overflow: hidden;
+}
+.toTop:hover{
+	background-color: #e8c203;
+	opacity: 1;
+	border-color:rgba(0,0,0,0.5);
+}
+@media(max-width:768px){
+	.toTop{
+		bottom: 67px!important;
+	}
+}
